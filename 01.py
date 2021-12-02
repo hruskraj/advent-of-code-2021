@@ -15,10 +15,7 @@ def solve(numbers):
     return cnt
 
 def group_numbers(numbers):
-    out = []
-    for i in range(len(numbers) - 2):
-        out.append(sum(numbers[i: i + 3]))
-    return out
+    return [sum(numbers[i: i + 3]) for i in range(len(numbers) - 2)]
 
 input = get_input()
 print(solve(input))
